@@ -27,5 +27,9 @@ let mercuryAge = age / .24;
 return mercuryAge;
 }
 
+venusYear(age){
+  let venusAge = age / .62;
+  return venusAge;
+}
 }
 export {User};
