@@ -36,5 +36,10 @@ marsYear(age){
   let marsAge = age / 1.88;
   return marsAge;
 }
+
+jupiterYear(age){
+  let jupiterAge = age / 11.86;
+  return jupiterAge;
+}
 }
 export {User};

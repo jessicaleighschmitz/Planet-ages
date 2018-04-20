@@ -28,4 +28,8 @@ describe("User", function(){
   it("should return users age in Mars years", function(){
     expect(reuseableUserBD.marsYear(1)).toEqual(0.5319148936170213);
   });
+
+  it("should return users age in Jupiter years", function(){
+    expect(reuseableUserBD.jupiterYear(1)).toEqual(0.08431703204047218);
+  });
 });
