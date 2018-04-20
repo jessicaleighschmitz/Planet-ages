@@ -23,11 +23,18 @@ ageInSeconds(age){
   return ageInSeconds;
 }
 
-dateDiff(current, bday){
+dateDiffSec(current, bday){
   let time = new Date(current).getTime();
   let actualBDay = new Date(bday).getTime();
   let lifeSecs = (time - actualBDay) / 1000;
   return lifeSecs;
+}
+
+dateDiff(bday){
+  let time = new Date("April 20, 2018 03:24:00").getTime();
+  let actualBDay = new Date(bday).getTime();
+  let lifeSecs = (time - actualBDay) / 1000;
+  return lifeSecs/3.154e+7;
 }
 
 // mercuryYear(age){
@@ -51,18 +58,31 @@ dateDiff(current, bday){
 //   return jupiterAge;
 // }
 
-planetAge(age, planet){
+eachPlanetAge(age, planet){
  let actualAge = age/this.planets[planet];
  return actualAge;
 }
-//
-// lifeExpectncy(gender){
-//   let ageofDeath = 0;
-//   if (gender === 'male'){
-//     return ageofDeath += 80;
-//   } else if (gender === 'female'){
-//     return ageofDeath += 85;
-//   }
-// }
+
+lifeExpectancy(gender){
+  let ageofDeath = 0;
+  if (gender === 'male'){
+    return ageofDeath += 80;
+  } else if (gender === 'female'){
+    return ageofDeath += 85;
+  }
+}
+
+planetAge(age,planet,gender){
+ let lifeExpect = this.lifeExpectancy(gender);
+ let bdayAge = this.dateDiff(age);
+ let actualAge = bdayAge/this.planets[planet];
+ let planetExp = lifeExpect/this.planets[planet];
+ let yearsLeft = planetExp - actualAge;
+ if(yearsLeft< 0){
+  return yearsLeft * -1;
+ } else{
+   return yearsLeft;
+ }
+}
 }
 export {User};

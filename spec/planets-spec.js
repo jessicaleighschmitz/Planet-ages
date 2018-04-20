@@ -4,7 +4,6 @@ describe("User", function(){
   let reuseableUserBD;
   beforeEach(function(){
     reuseableUserBD = new User('earth', 'mercury', 'venus', 'mars', 'jupiter');
-    console.log('pickle', reuseableUserBD);
   });
 
   it("should return seconds alive when years alive is provided", function(){
@@ -13,7 +12,7 @@ describe("User", function(){
   });
 
   it("should return return the number of seconds between two days", function(){
-    expect(reuseableUserBD.dateDiff("April 20, 2018 03:24:00","December 17, 1995 03:24:00")).toEqual(705020400);
+    expect(reuseableUserBD.dateDiffSec("April 20, 2018 03:24:00","December 17, 1995 03:24:00")).toEqual(705020400);
   });
   //
   // it("should return users age in Mercury years", function(){
@@ -33,6 +32,14 @@ describe("User", function(){
   //   expect(reuseableUserBD.jupiterYear(1)).toEqual(0.08431703204047218);
   // });
   it("should return user's age depending on each planet", function(){
-    expect(reuseableUserBD.planetAge(2, 'mercury')).toEqual(8.333333333333334);
+    expect(reuseableUserBD.eachPlanetAge(2, 'mercury')).toEqual(8.333333333333334);
   });
+
+  it("should determine user's life expectancy", function(){
+    expect(reuseableUserBD.lifeExpectancy('male')).toEqual(80);
+  });
+
+  it("should calculate how many years left or years past the user is relative to each planet's life expectancy", function(){
+  expect(reuseableUserBD.planetAge(5,'mercury','male')).toEqual(131.9726484893522);
+});
 });
