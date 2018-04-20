@@ -1,12 +1,21 @@
 
 class User{
-  constructor(earth, mercury, venus, mars, jupiter){
-    this.earth = earth;
-    this.mercury = mercury;
-    this.venus = venus;
-    this.mars = mars;
-    this.jupiter = jupiter;
+  constructor(){
+    this.planets = {
+      'mercury': .24,
+      'venus': .62,
+      'mars': 1.88,
+      'jupiter':11.86
+    }
   }
+
+// planets = {
+//   'mercury': .24,
+//   'venus': .62,
+//   'mars': 1.88,
+//   'jupiter':11.86
+// }
+
 
 ageInSeconds(age){
   const secondsInAYear = 3.154e+7;
@@ -21,25 +30,39 @@ dateDiff(current, bday){
   return lifeSecs;
 }
 
-mercuryYear(age){
-let mercuryAge = age / .24;
+// mercuryYear(age){
+// let mercuryAge = age / .24;
+//
+// return mercuryAge;
+// }
+//
+// venusYear(age){
+//   let venusAge = age / .62;
+//   return venusAge;
+// }
+//
+// marsYear(age){
+//   let marsAge = age / 1.88;
+//   return marsAge;
+// }
+//
+// jupiterYear(age){
+//   let jupiterAge = age / 11.86;
+//   return jupiterAge;
+// }
 
-return mercuryAge;
+planetAge(age, planet){
+ let actualAge = age/this.planets[planet];
+ return actualAge;
 }
-
-venusYear(age){
-  let venusAge = age / .62;
-  return venusAge;
-}
-
-marsYear(age){
-  let marsAge = age / 1.88;
-  return marsAge;
-}
-
-jupiterYear(age){
-  let jupiterAge = age / 11.86;
-  return jupiterAge;
-}
+//
+// lifeExpectncy(gender){
+//   let ageofDeath = 0;
+//   if (gender === 'male'){
+//     return ageofDeath += 80;
+//   } else if (gender === 'female'){
+//     return ageofDeath += 85;
+//   }
+// }
 }
 export {User};
