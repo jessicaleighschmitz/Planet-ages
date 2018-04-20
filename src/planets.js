@@ -31,5 +31,10 @@ venusYear(age){
   let venusAge = age / .62;
   return venusAge;
 }
+
+marsYear(age){
+  let marsAge = age / 1.88;
+  return marsAge;
+}
 }
 export {User};

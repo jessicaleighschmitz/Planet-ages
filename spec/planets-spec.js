@@ -24,4 +24,8 @@ describe("User", function(){
   it("should return users age in Venus years", function(){
     expect(reuseableUserBD.venusYear(1)).toEqual(1.6129032258064517);
   });
+
+  it("should return users age in Mars years", function(){
+    expect(reuseableUserBD.marsYear(1)).toEqual(0.5319148936170213);
+  });
 });
