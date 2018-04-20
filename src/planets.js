@@ -14,5 +14,18 @@ ageInSeconds(age){
   return ageInSeconds;
 }
 
+dateDiff(current, bday){
+  let time = new Date(current).getTime();
+  let actualBDay = new Date(bday).getTime();
+  let lifeSecs = (time - actualBDay) / 1000;
+  return lifeSecs;
+}
+
+mercuryYear(age){
+let mercuryAge = age / .24;
+
+return mercuryAge;
+}
+
 }
 export {User};
