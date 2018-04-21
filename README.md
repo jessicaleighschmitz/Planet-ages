@@ -1,9 +1,3 @@
-- take age in years and convert it to seconds
-- calculate the difference between two dates, measure in seconds
-- calculate users age in years on each planets
-- determine user life expectancy based on gender
--
-
 
 # _Age in Planets_
 

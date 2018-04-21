@@ -39,6 +39,6 @@ describe("User", function(){
   });
 
   it("should calculate how many years left or years past the user is relative to each planet's life expectancy", function(){
-    expect(reuseableUserBD.planetAge(5,'mercury','male')).toEqual(131.9726484893522);
+    expect(reuseableUserBD.planetAge('December 17, 1995 03:24:00','earth','male')).toEqual(57.646785034876345);
   });
 });

@@ -1,6 +1,7 @@
 class User{
   constructor(){
     this.planets = {
+      'earth': 1,
       'mercury': .24,
       'venus': .62,
       'mars': 1.88,
