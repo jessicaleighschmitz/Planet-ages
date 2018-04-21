@@ -7,7 +7,6 @@ describe("User", function(){
   });
 
   it("should return seconds alive when years alive is provided", function(){
-    console.log('answer',reuseableUserBD.ageInSeconds(2));
     expect(reuseableUserBD.ageInSeconds(2)).toEqual(3.154e+7 * 2);
   });
 
@@ -40,6 +39,6 @@ describe("User", function(){
   });
 
   it("should calculate how many years left or years past the user is relative to each planet's life expectancy", function(){
-  expect(reuseableUserBD.planetAge(5,'mercury','male')).toEqual(131.9726484893522);
-});
+    expect(reuseableUserBD.planetAge(5,'mercury','male')).toEqual(131.9726484893522);
+  });
 });
